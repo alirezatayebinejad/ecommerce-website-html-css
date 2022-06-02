@@ -2,42 +2,100 @@
 
 /* global styles */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'League Spartan', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
 }
 
-h1{
-    font-size:50px;
-    line-height: 64px;
-    color:#222;
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
 }
-h2{
-    font-size:46px;
-    line-height: 54px;
-    color:#222;
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
 }
-h4{
-    font-size:20px;
-    color:#222;
+h4 {
+  font-size: 20px;
+  color: #222;
 }
-h6{
-    font-weight: 700;
-    font-size: 12px;
+h6 {
+  font-weight: 700;
+  font-size: 12px;
 }
-p{
-    font-size: 16px;
-    color: #465b52;
-    margin:15px 0 20px 0;
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
 }
-.section-p1{
-    padding: 40px 0;
+.section-p1 {
+  padding: 40px 0;
 }
-.section-m1{
-    margin: 40px 0;
+.section-m1 {
+  margin: 40px 0;
 }
-body{
-    width: 100%;
+body {
+  width: 100%;
+}
+
+/* header styles */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e3e6f3;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-list-nav ul {
+  display: flex;
+}
+.header-list-nav ul li {
+  list-style-type: none;
+  padding: 0 20px;
+  position: relative;
+
+}
+.header-list-nav ul a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+.header-list-nav ul a:hover,
+.header-list-nav ul a.active {
+  color: #088178;
+  content: "";
+
+}
+.header-list-icon a {
+  color: #1a1a1a;
+  padding-left: 20px;
+  transition: 0.3s ease;
+}
+.header-list-icon a:hover,
+.header-list-nav ul a.active {
+  color: #088178;
+}
+.header-list-nav ul li a:hover::after,
+.header-list-nav ul li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:#088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
 }
