@@ -51,10 +51,10 @@ body {
   background-color: #e3e6f3;
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  position: sticky;
-  top:0;
-  left: 0;
   z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .header-list {
@@ -69,7 +69,6 @@ body {
   list-style-type: none;
   padding: 0 20px;
   position: relative;
-
 }
 .header-list-nav ul a {
   text-decoration: none;
@@ -82,7 +81,6 @@ body {
 .header-list-nav ul a.active {
   color: #088178;
   content: "";
-
 }
 .header-list-icon a {
   color: #1a1a1a;
@@ -94,21 +92,21 @@ body {
   color: #088178;
 }
 .header-list-nav ul li a:hover::after,
-.header-list-nav ul li a.active::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background:#088178;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
+.header-list-nav ul li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
 }
 
 /* home main styles */
 
 /* hero section styles */
 
-section.hero{
+section#hero {
   background-image: url(images/hero4.png);
   width: 100%;
   height: 90vh;
@@ -116,26 +114,74 @@ section.hero{
   background-position: top 25% right 0;
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: center;
   padding: 0 80px;
 }
 
-section.hero h4{
+#hero h4 {
   padding-bottom: 15px;
 }
-section.hero h1{
-color: #088178;
+#hero h1 {
+  color: #088178;
 }
-section.hero button{
-background-color: transparent;
-background-image: url(images/button.png);
-background-repeat: no-repeat;
-background-size: cover;
-border: 0;
-cursor: pointer;
-font-size: 15px;
-font-weight: 700;
-color: #088178;
-padding: 14px 65px 14px 65px;
+#hero button {
+  background-color: transparent;
+  background-image: url(images/button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+  padding: 14px 65px 14px 65px;
+}
+
+/* feature section styles */
+#features {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#features .f-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+  transition: box-shadow 0.3s;
+}
+#features .f-box:hover {
+  box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+}
+#features .f-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#features .f-box h6 {
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #088178;
+  background-color: #fddde4;
+}
+#features .f-box:nth-child(2) h6 {
+  background-color: #cdebbc;
+}
+#features .f-box:nth-child(3) h6 {
+  background-color: #d1e8f2;
+}
+#features .f-box:nth-child(4) h6 {
+  background-color: #cdd4f8;
+}
+#features .f-box:nth-child(5) h6 {
+  background-color: #f6dbf6;
+}
+#features .f-box:nth-child(6) h6 {
+  background-color: #fff2e5;
 }
