@@ -206,18 +206,18 @@ section#hero {
 
 /* feature section styles */
 
-#f-products .pro-collection{
+.product-section .pro-collection{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 60px;
 }
-#f-products h1, #f-products p{
+.product-section h1, .product-section p{
   text-align: center;
 }
-#f-products .product-cart{
+.product-section .product-cart{
   width: 280px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #ebebeb;
   padding: 13px;
   margin-bottom: 30px;
   border-radius: 25px;
@@ -225,32 +225,32 @@ section#hero {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   transition: box-shadow 0.2s;
 }
-#f-products .product-cart:hover{
+.product-section .product-cart:hover{
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
 
 }
-#f-products .product-cart img{
+.product-section .product-cart img{
   width: 100%;
   border-radius: 25px;
 
 }
-#f-products .product-cart span{
+.product-section .product-cart span{
   color: #969696;
   font-weight: 500;
   line-height: 30px;
 }
-#f-products .product-cart h4{
+.product-section .product-cart h4{
   font-size: 18px;
 }
-#f-products .product-cart .stars{
+.product-section .product-cart .stars{
   color: #e6ae2c;
   padding: 6px 0;
 }
-#f-products .product-cart .price{
+.product-section .product-cart .price{
   color: #088178;
   padding: 4px 0;
 }
-#f-products .product-cart .buy-icon{
+.product-section .product-cart .buy-icon{
   color: #088178;
   background-color: #c7e9e75e;
   padding: 15px;
@@ -279,4 +279,9 @@ section#hero {
   color: #eaebf0;
   padding: 20px 0;
 }
+
+/* new arrival section styles 
+  this section gets the same styles 
+  in featured products section
+*/
 
