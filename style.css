@@ -309,7 +309,7 @@ span {
   justify-content: center;
   padding: 25px;
   background-size: cover;
-  backdrop-filter:blur(8%);
+  backdrop-filter: blur(8%);
 }
 #banners .big-banners button {
   margin-top: 20px;
@@ -357,19 +357,19 @@ span {
   padding: 25px;
   background-size: cover;
 }
-#banners .small-banners h2{
+#banners .small-banners h2 {
   font-size: 25px;
 }
-#banners .small-banners h5{
+#banners .small-banners h5 {
   color: #771818;
 }
 
 /* newsletter section styles */
 
-#newsletter{
+#newsletter {
   background-image: url(images/banner/b14.png);
   background-repeat: no-repeat;
-  background-position:  180px;
+  background-position: 180px;
   background-color: #041e42;
   height: 160px;
   display: flex;
@@ -377,32 +377,32 @@ span {
   justify-content: space-between;
   padding: 0 75px;
 }
-#newsletter .newsletter-text h3{
+#newsletter .newsletter-text h3 {
   color: white;
   font-size: 30px;
   padding: 0 0 15px 0;
 }
-#newsletter .newsletter-text h5{
+#newsletter .newsletter-text h5 {
   color: rgb(151, 151, 151);
   font-size: 17px;
 }
-#newsletter .newsletter-text h5 span{
+#newsletter .newsletter-text h5 span {
   color: rgb(216, 182, 29);
 }
-#newsletter .form input{
+#newsletter .form input {
   padding: 20px;
   width: 350px;
   height: 56px;
   background-color: #d1d0d0;
   border-radius: 6px 0 0 6px;
   font-size: 18px;
-  
+
   border: none;
   outline: none;
   margin-right: -4px;
   margin-top: 1px;
 }
-#newsletter .form button{
+#newsletter .form button {
   margin-left: 0;
   padding: 20px;
   border: none;
@@ -412,4 +412,35 @@ span {
   font-size: 17px;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+}
+
+/* footer section styles */
+
+#footer{
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  padding: 75px;
+  background-color: #ececec;
+}
+#footer div{
+}
+#footer p, #footer a{
+  color: rgb(109, 109, 109);
+  text-decoration: none;
+}
+#footer a:hover{
+  color:#088178;
+}
+#footer .about a{
+  display: block;
+  padding:8px 0;
+}
+#footer .myaccount a{
+  display: block;
+  padding:8px 0;
+}
+#footer .download img{
+  border: 1px solid #08817969;
+  border-radius: 7px;
 }
