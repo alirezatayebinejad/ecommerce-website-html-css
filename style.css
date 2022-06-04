@@ -39,19 +39,19 @@ p {
   margin: 40px 0;
 }
 
-button.normal{
+button.normal {
   font-size: 14px;
   font-weight: 600px;
-  padding:15px 30px;
-  color:#000;
+  padding: 15px 30px;
+  color: #000;
   background-color: #fff;
   border-radius: 4px;
-  cursor:pointer;
-  border:none;
+  cursor: pointer;
+  border: none;
   outline: none;
   transition: 0.2s;
 }
-button.normal:hover{
+button.normal:hover {
   background-color: #088178;
   color: #fff;
 }
@@ -206,16 +206,17 @@ section#hero {
 
 /* feature section styles */
 
-.product-section .pro-collection{
+.product-section .pro-collection {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 60px;
 }
-.product-section h1, .product-section p{
+.product-section h1,
+.product-section p {
   text-align: center;
 }
-.product-section .product-cart{
+.product-section .product-cart {
   width: 280px;
   border: 1px solid #ebebeb;
   padding: 13px;
@@ -225,32 +226,30 @@ section#hero {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   transition: box-shadow 0.2s;
 }
-.product-section .product-cart:hover{
+.product-section .product-cart:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
-
 }
-.product-section .product-cart img{
+.product-section .product-cart img {
   width: 100%;
   border-radius: 25px;
-
 }
-.product-section .product-cart span{
+.product-section .product-cart span {
   color: #969696;
   font-weight: 500;
   line-height: 30px;
 }
-.product-section .product-cart h4{
+.product-section .product-cart h4 {
   font-size: 18px;
 }
-.product-section .product-cart .stars{
+.product-section .product-cart .stars {
   color: #e6ae2c;
   padding: 6px 0;
 }
-.product-section .product-cart .price{
+.product-section .product-cart .price {
   color: #088178;
   padding: 4px 0;
 }
-.product-section .product-cart .buy-icon{
+.product-section .product-cart .buy-icon {
   color: #088178;
   background-color: #c7e9e75e;
   padding: 15px;
@@ -262,9 +261,9 @@ section#hero {
 
 /* off banner section styles */
 
-#off-banner{
+#off-banner {
   background-image: url(images/banner/b2.jpg);
-  background-size:cover;
+  background-size: cover;
   width: 100%;
   height: 40vh;
   display: flex;
@@ -272,10 +271,10 @@ section#hero {
   justify-content: center;
   flex-direction: column;
 }
-#off-banner h4{
+#off-banner h4 {
   color: #eaebf0;
 }
-#off-banner h2{
+#off-banner h2 {
   color: #eaebf0;
   padding: 20px 0;
 }
@@ -285,3 +284,81 @@ section#hero {
   in featured products section
 */
 
+/* banners section styles */
+#banners {
+  margin: 0 60px;
+}
+#banners h2,
+h4,
+span {
+  color: rgb(248, 248, 248);
+}
+#banners .big-banners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#banners .big-banners div {
+  min-width: 580px;
+  margin: 15px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 25px;
+  background-size: cover;
+  backdrop-filter:blur(8%);
+}
+#banners .big-banners button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+  color: rgb(248, 248, 248);
+  border: 1px solid rgb(248, 248, 248);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#banners .big-banners div:hover button {
+  background-color: #088178;
+  border: 1px solid #088178;
+}
+#banners .big-banners-1 {
+  background-image: url(images/banner/b17.jpg);
+}
+#banners .big-banners-2 {
+  background-image: url(images/banner/b10.jpg);
+}
+#banners .small-banners-1 {
+  background-image: url(images/banner/b7.jpg);
+}
+#banners .small-banners-2 {
+  background-image: url(images/banner/b4.jpg);
+}
+#banners .small-banners-3 {
+  background-image: url(images/banner/b18.jpg);
+}
+#banners .small-banners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#banners .small-banners div {
+  min-width: 370px;
+  height: 200px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 25px;
+  background-size: cover;
+}
+#banners .small-banners h2{
+  font-size: 25px;
+}
+#banners .small-banners h5{
+  color: #771818;
+}
