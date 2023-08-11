@@ -109,15 +109,24 @@ body {
 .header-list-nav ul a.active {
   color: #088178;
 }
-.header-list-nav ul li a:hover::after,
+
+/* .header-list-nav ul li a:hover::after, */
+.header-list-nav ul li a{
+  text-align: center;
+}
+.header-list-nav ul li a::after,
 .header-list-nav ul li a.active::after {
   content: "";
-  width: 30%;
+  width: 0%;
+  transition: width 0.3s;
   height: 2px;
   background: #088178;
   position: absolute;
-  bottom: -4px;
-  left: 20px;
+  bottom: -0.5rem;
+  left: 0;
+}
+.header-list-nav ul li a:hover::after{
+  width: 100%;
 }
 
 /* home main styles */
@@ -129,7 +138,8 @@ body {
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: top -80% right 0;
+  /* background-position: top -80% right 0; */
+  background-position: top -50% right 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -140,6 +150,7 @@ body {
 #hero h4 {
   padding-bottom: 15px;
   font-size: 40px;
+  text-shadow: 0px 0px 10px red;
 }
 #hero h2{
   font-size: 70px;
@@ -180,10 +191,12 @@ body {
   border: 1px solid #cce7d0;
   border-radius: 4px;
   margin: 15px 0;
-  transition: box-shadow 0.3s;
+  transition: all 0.3s;
 }
 #features .f-box:hover {
-  box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 #features .f-box img {
   width: 100%;
@@ -234,10 +247,12 @@ body {
   border-radius: 25px;
   position: relative;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  transition: box-shadow 0.2s;
+  transition: all 0.2s;
 }
 .product-section .product-cart:hover {
+  background: white;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  transform: scale(1.021);
 }
 .product-section .product-cart img {
   width: 100%;
@@ -382,7 +397,7 @@ span {
   background-repeat: no-repeat;
   background-position: 180px;
   background-color: #041e42;
-  height: 160px;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -423,6 +438,10 @@ span {
   font-size: 17px;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
+  transition: all 0.3s;
+}
+#newsletter .form button:hover{
+  background-color: #096660;
 }
 
 /* footer section styles */
