@@ -1,0 +1,51 @@
+/* Add these styles at the end of your existing CSS */
+
+/* About section styles */
+
+#about {
+    padding: 40px 80px;
+    background-color: #f4f4f4;
+  }
+  
+  #about h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+  }
+  
+  #about p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+  }
+  
+  #about .about-highlight {
+    margin-top: 30px;
+  }
+  
+  #about .important-text {
+    font-size: 18px;
+    line-height: 28px;
+    color: #088178;
+  }
+  
+  /* Newsletter section styles */
+  
+  #newsletter {
+    background-image: url(images/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 180px;
+    background-color: #041e42;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 75px;
+  }
+  
+  #newsletter .newsletter-text h3,
+  #newsletter .newsletter-text h5,
+  #newsletter .newsletter-text h5 span {
+    color: white;
+  }
+  
