@@ -12,13 +12,40 @@
     ></script>
   </head>
   <body>
+   
     <!--header section-->
 
     <header>
       <div id="header">
-        <div class="header-logo">
-          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
-        </div>
+       <div class='div-side' id='sideDiv' >
+          
+          <div class="header-logo">
+          
+            <a href="indext.html"><img src="images/logo.png" alt="" /></a>   </div>
+              <ul>
+             
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </nav>
+            <div class="header-list-icon">
+              <a href=""><i class="fa fa-bag-shopping"></i></a>
+      
+          </div></div>
+        <ul class="ul-header">
+          <li><button class="btn-span" onclick="sideOpen()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button></li>
+          <li><div class="header-logo">
+          
+           <a href="indext.html"><img src="images/logo.png" alt="" /></a>   </div></li>
+          </ul> 
+     
         <div class="header-list">
           <nav class="header-list-nav">
             <ul>
@@ -39,7 +66,7 @@
     <!--main section-->
 
     <main>
-      <section id="hero">
+      <section id="hero" onclick="closeDiv()">
         <h4>Trade-in-offer</h4>
         <h2>Super value deals</h2>
         <h1>On all products</h1>
@@ -47,7 +74,7 @@
         <button>Shop now</button>
       </section>
 
-      <section id="features" class="section-p1">
+      <section id="features" class="section-p1" onclick="closeDiv()">
         <div class="f-box">
           <img src="images/features/f1.png" alt="free shipping" />
           <h6>Free shipping</h6>
@@ -74,7 +101,7 @@
         </div>
       </section>
 
-      <section class="product-section" class="section-p1">
+      <section class="product-section" class="section-p1" onclick="closeDiv()">
         <h1>Featured Products</h1>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-collection">
@@ -106,7 +133,7 @@
             <h4 class="price">$78</h4>
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
-          <div class="product-cart">
+          <div class="product-cart" onclick="closeDiv()">
             <img src="images/products/f3.jpg" alt="product image" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
@@ -193,13 +220,13 @@
         </div>
       </section>
 
-      <section id="off-banner" class="section-m1">
+      <section id="off-banner" class="section-m1" onclick="closeDiv()">
         <h4>Repaire Services</h4>
         <h2>Up to 70% Off - All t-Shirts & Accessories</h2>
         <button class="normal">Explore More</button>
       </section>
 
-      <section class="product-section" class="section-p1">
+      <section class="product-section" class="section-p1" onclick="closeDiv()">
         <h1>New Arrivals</h1>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-collection">
@@ -318,7 +345,7 @@
         </div>
       </section>
 
-      <section id="banners" class="section-p1">
+      <section id="banners" class="section-p1" onclick="closeDiv()">
         <div class="big-banners">
           <div class="big-banners-1">
             <h4>crazy deals</h4>
@@ -349,7 +376,7 @@
         </div>
       </section>
 
-      <section id="newsletter">
+      <section id="newsletter" onclick="closeDiv()">
         <div class="newsletter-text">
           <h3>Sign Up For Newsletters</h3>
           <h5>get e-mail updates about out latest shop and <span>special offers</span></h5>
@@ -365,7 +392,7 @@
     <!--footer section-->
 
     <footer>
-      <div id="footer">
+      <div id="footer" onclick="closeDiv()">
         <div class="contact">
           <a href="indext.html"><img src="images/logo.png" alt="" /></a>
           <br> <br>
@@ -420,5 +447,39 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      let sideDrawer=false
+      let count;
+      var sideDiv=document.getElementById('sideDiv')
+      var sideOpenB=sideDiv.style.display = "none";
+      var x = window.matchMedia("(min-width:768px)")
+      window.onresize=resizeFn;
+      function resizeFn(){
+        if(x.matches){
+        
+          if(sideOpenB==='block'){
+            sideOpenB=sideDiv.style.display = "none";
+          }
+      }
+      }
+      
+      
+      function sideOpen() {
+    
+     sideDrawer=true
+        if(sideDrawer && sideDiv.style.display === "none"){
+          sideOpenB=sideDiv.style.display = "block";
+          
+        }
+        }
+  
+
+function closeDiv(){
+  if(sideDiv.style.display === "block"){
+          sideDiv.style.display = "none";
+        }
+}
+
+    </script>
   </body>
 </html>
