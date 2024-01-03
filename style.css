@@ -164,6 +164,48 @@ body {
   padding: 14px 65px 14px 65px;
 }
 
+/* heroAbout section styles */
+
+ #heroAbout {
+  /* background-image: url(images/about/a6.jpg); */
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 80px;
+} 
+
+#heroAbout h4 {
+  padding-top: 15px;
+  font-size: 40px;
+}
+#heroAbout h2{
+  font-size: 70px;
+
+}
+#heroAbout h1 {
+  color: #088178;
+  font-size: 70px;
+  text-align: center;
+}
+/* #heroAbout button {
+  background-color: transparent;
+  background-image: url(images/button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 260px;
+  height: 60px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  color: #088178;
+  padding: 14px 65px 14px 65px;
+} */
+
 /* feature section styles */
 
 #features {
@@ -223,7 +265,13 @@ body {
 }
 .product-section h1,
 .product-section p {
+  /* margin: 50px;
+  margin-top: 100px; */
   text-align: center;
+}
+.product-section h1{
+  text-align: center;
+  margin: 30px;
 }
 .product-section .product-cart {
   width: 280px;
