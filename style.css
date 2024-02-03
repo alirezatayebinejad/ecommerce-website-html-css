@@ -95,9 +95,9 @@ body {
   color: #1a1a1a;
   transition: 0.3s ease;
 }
-.header-list-nav ul a:hover,
-.header-list-nav ul a.active {
-  color: #088178;
+.header-list-nav li a:hover,
+.header-list-nav li a.active {
+  color: #00a69b;
   content: "";
 }
 .header-list-icon a {
@@ -112,7 +112,7 @@ body {
 .header-list-nav ul li a:hover::after,
 .header-list-nav ul li a.active::after {
   content: "";
-  width: 30%;
+  width: 50%;
   height: 2px;
   background: #088178;
   position: absolute;
@@ -173,10 +173,12 @@ body {
 }
 #features .f-box {
   width: 180px;
+
   text-align: center;
   padding: 25px 15px;
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-  border: 1px solid #cce7d0;
+  border: 5px solid #cce7d0;
+  border-style: inset;
   border-radius: 4px;
   margin: 15px 0;
   transition: box-shadow 0.3s;
@@ -227,7 +229,7 @@ body {
 }
 .product-section .product-cart {
   width: 280px;
-  border: 1px solid #ebebeb;
+  border: 5px double #088178;
   padding: 13px;
   margin-bottom: 30px;
   border-radius: 25px;
@@ -280,6 +282,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 50px;
 }
 #off-banner h4 {
   color: #eaebf0;
@@ -386,6 +389,7 @@ span {
   align-items: center;
   justify-content: space-between;
   padding: 0 75px;
+  border-radius: 50px;
 }
 #newsletter .newsletter-text h3 {
   color: white;
