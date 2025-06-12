@@ -1,0 +1,14 @@
+{
+    "name": "ecommerce-website",
+    "version": "1.0.0",
+    "description": "E-commerce website with cart functionality",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "exceljs": "^4.3.0"
+    }
+  } 
