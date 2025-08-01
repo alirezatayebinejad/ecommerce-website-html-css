@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Ecommerce website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--header section-->
+    <header>
+      <div id="header">
+        <div class="header-logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="header-list">
+          <nav class="header-list-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a class="active" href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="header-list-icon">
+            <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--main section-->
+    <main>
+      <section id="page-header" class="contact-header">
+        <h2>#let's_talk</h2>
+        <p>Leave a message. We love to hear from you!</p>
+      </section>
+
+      <section id="contact-details" class="section-p1">
+        <div class="details">
+          <span>GET IN TOUCH</span>
+          <h2>Visit one of our agency locations or contact us today</h2>
+          <h3>Head Office</h3>
+          <div>
+            <li>
+              <i class="fa fa-map"></i>
+              <p>562 Wellington Road, Street 32, San Francisco</p>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <p>contact@example.com</p>
+            </li>
+            <li>
+              <i class="fa fa-phone-alt"></i>
+              <p>+01 2222 365 /(+91) 01 2345 6789</p>
+            </li>
+            <li>
+              <i class="fa fa-clock"></i>
+              <p>Monday to Saturday: 9:00am to 16:00pm</p>
+            </li>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM3nCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1234567890" 
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section id="form-details">
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+          <span>LEAVE A MESSAGE</span>
+          <h2>Share Your Thoughts</h2>
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="E-mail" required>
+          <input type="text" id="subject" placeholder="Subject" required>
+          <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+          <button type="submit" class="normal">Submit</button>
+        </form>
+
+        <div class="feedback-display">
+          <h2>Recent Feedback</h2>
+          <div id="feedbackList">
+            <!-- Feedback messages will be displayed here -->
+          </div>
+        </div>
+      </section>
+
+      <section id="team-section" class="section-p1">
+        <h2>Our Team</h2>
+        <p>Get in touch with our experienced team members</p>
+        <div class="team-container">
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/people/1.png" alt="John Doe">
+            </div>
+            <div class="member-info">
+              <h3>John Doe</h3>
+              <span class="position">Senior Marketing Manager</span>
+              <div class="contact-details">
+                <p><i class="fa fa-phone"></i> + 000 123 000 77 88</p>
+                <p><i class="fa fa-envelope"></i> contact@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/people/2.png" alt="William Smith">
+            </div>
+            <div class="member-info">
+              <h3>William Smith</h3>
+              <span class="position">Senior Marketing Manager</span>
+              <div class="contact-details">
+                <p><i class="fa fa-phone"></i> + 000 123 000 77 88</p>
+                <p><i class="fa fa-envelope"></i> contact@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="member-image">
+              <img src="images/people/3.png" alt="Emma Stone">
+            </div>
+            <div class="member-info">
+              <h3>Emma Stone</h3>
+              <span class="position">Senior Marketing Manager</span>
+              <div class="contact-details">
+                <p><i class="fa fa-phone"></i> + 000 123 000 77 88</p>
+                <p><i class="fa fa-envelope"></i> contact@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--footer section-->
+    <footer class="section-p1">
+      <div class="col">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="contact-info">
+          <h4>Contact</h4>
+          <li>
+            <i class="fa fa-map"></i>
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+          </li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <p><strong>Phone: </strong>+01 2222 365 / (+91) 01 2345 6789</p>
+          </li>
+          <li>
+            <i class="fa fa-clock"></i>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+          </li>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="images/pay/app.jpg" alt="App Store">
+          <img src="images/pay/play.jpg" alt="Google Play">
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="images/pay/pay.png" alt="Payment Methods">
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html> 

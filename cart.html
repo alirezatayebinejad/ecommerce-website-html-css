@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Ecommerce website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--header section-->
+    <header>
+      <div id="header">
+        <div class="header-logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="header-list">
+          <nav class="header-list-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="header-list-icon">
+            <a href="cart.html" class="active"><i class="fa fa-bag-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="cart" class="section-p1">
+        <h1>Shopping Cart</h1>
+        <div id="cart-items">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cart-summary">
+          <div class="summary-details">
+            <h3>Cart Total</h3>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Amount: ₹<span id="total-amount">0</span></p>
+          </div>
+          <button onclick="proceedToCheckout()" class="normal" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+      </section>
+
+      <!-- Registration Modal -->
+      <div id="registration-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Checkout Information</h2>
+          <form id="registration-form">
+            <!-- Personal Information -->
+            <div class="form-section">
+              <h3>Personal Information</h3>
+              <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="form-section">
+              <h3>Shipping Address</h3>
+              <div class="form-group">
+                <label for="street">Street Address:</label>
+                <input type="text" id="street" name="street" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City:</label>
+                  <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                  <label for="state">State:</label>
+                  <input type="text" id="state" name="state" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="zip">ZIP Code:</label>
+                  <input type="text" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country:</label>
+                  <input type="text" id="country" name="country" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Information -->
+            <div class="form-section">
+              <h3>Payment Information</h3>
+              <div class="form-group">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiry">Expiry Date:</label>
+                  <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV:</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="card-name">Name on Card:</label>
+                <input type="text" id="card-name" name="card-name" required>
+              </div>
+            </div>
+
+            <button type="submit" class="normal">Complete Purchase</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bill Modal -->
+      <div id="bill-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="document.getElementById('bill-modal').style.display='none'">&times;</span>
+          <div id="bill-content">
+            <div class="bill-header">
+              <img src="images/logo.png" alt="Logo" style="max-width: 150px;">
+              <h2>Order Confirmation</h2>
+              <p>Thank you for your purchase!</p>
+            </div>
+            <div class="bill-details">
+              <div class="customer-info">
+                <h3>Customer Details</h3>
+                <p id="bill-name"></p>
+                <p id="bill-email"></p>
+                <p id="bill-phone"></p>
+              </div>
+              <div class="shipping-info">
+                <h3>Shipping Address</h3>
+                <p id="bill-address"></p>
+              </div>
+              <div class="order-info">
+                <h3>Order Details</h3>
+                <div id="bill-items"></div>
+                <div class="bill-total">
+                  <p>Total Items: <span id="bill-total-items"></span></p>
+                  <p>Total Amount: ₹<span id="bill-total-amount"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="bill-footer">
+              <button onclick="window.print()" class="normal">Print Bill</button>
+              <button onclick="location.href='index.html'" class="normal">Continue Shopping</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--footer section-->
+    <footer class="section-p1">
+      <div class="col">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="contact-info">
+          <h4>Contact</h4>
+          <li>
+            <i class="fa fa-map"></i>
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+          </li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <p><strong>Phone: </strong>+01 2222 365 / (+91) 01 2345 6789</p>
+          </li>
+          <li>
+            <i class="fa fa-clock"></i>
+            <p><strong>Hours: </strong>10:00 - 18:00, Mon - Sat</p>
+          </li>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html> 

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .login-container {
+            max-width: 400px;
+            width: 90%;
+            margin: 20px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .login-form, .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #95a5a6;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input, .register-form input {
+            width: 100%;
+            padding: 14px 15px 14px 45px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #2c3e50;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input::placeholder, .register-form input::placeholder {
+            color: #95a5a6;
+        }
+
+        .login-form input:focus, .register-form input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .input-group:focus-within i {
+            color: #3498db;
+        }
+
+        .login-form button, .register-form button {
+            padding: 14px;
+            background: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .login-form button:hover, .register-form button:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+
+        .error-message {
+            color: #e74c3c;
+            display: none;
+            margin-top: 10px;
+            font-size: 13px;
+            padding: 10px;
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: 6px;
+            border-left: 2px solid #e74c3c;
+        }
+
+        .success-message {
+            color: #2ecc71;
+            display: none;
+            margin-top: 10px;
+            font-size: 13px;
+            padding: 10px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 6px;
+            border-left: 2px solid #2ecc71;
+        }
+
+        .toggle-form {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .toggle-form p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .toggle-form a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-form a:hover {
+            color: #2980b9;
+        }
+
+        #registerSection {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .login-container {
+                width: 95%;
+                margin: 10px;
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .login-form input, .register-form input {
+                padding: 12px 15px 12px 40px;
+                font-size: 14px;
+            }
+
+            .login-form button, .register-form button {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        /* Form switching animation */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(-10px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        #loginSection, #registerSection {
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        /* Subtle hover effect for container */
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, transparent, rgba(52, 152, 219, 0.03), transparent);
+            border-radius: 16px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .login-container:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div id="loginSection">
+            <h2>Welcome Back</h2>
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p class="error-message" id="loginErrorMessage"></p>
+            </form>
+            <div class="toggle-form">
+                <p>New user? <a onclick="toggleForms()">Register here</a></p>
+            </div>
+        </div>
+
+        <div id="registerSection">
+            <h2>Create Account</h2>
+            <form class="register-form" id="registerForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="registerEmail" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit">Create Account</button>
+                <p class="error-message" id="registerErrorMessage"></p>
+                <p class="success-message" id="registerSuccessMessage"></p>
+            </form>
+            <div class="toggle-form">
+                <p>Already have an account? <a onclick="toggleForms()">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle between login and register forms
+        function toggleForms() {
+            const loginSection = document.getElementById('loginSection');
+            const registerSection = document.getElementById('registerSection');
+            
+            if (loginSection.style.display !== 'none') {
+                loginSection.style.display = 'none';
+                registerSection.style.display = 'block';
+            } else {
+                loginSection.style.display = 'block';
+                registerSection.style.display = 'none';
+            }
+        }
+
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Get registered users from localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            
+            // Check for demo account first
+            if (email === 'demo@example.com' && password === 'password123') {
+                // Set login status in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userName', 'Demo User');
+                
+                // Redirect to home page
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Then check registered users
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                // Set login status in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userName', `${user.firstName} ${user.lastName}`);
+                
+                // Redirect to home page
+                window.location.href = 'index.html';
+            } else {
+                document.getElementById('loginErrorMessage').style.display = 'block';
+                document.getElementById('loginErrorMessage').textContent = 'Invalid email or password';
+                
+                // Clear password field
+                document.getElementById('loginPassword').value = '';
+                
+                // Focus on password field
+                document.getElementById('loginPassword').focus();
+            }
+        });
+
+        // Handle registration form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('registerEmail').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                document.getElementById('registerErrorMessage').style.display = 'block';
+                document.getElementById('registerErrorMessage').textContent = 'Passwords do not match';
+                return;
+            }
+
+            // Get existing users
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if email already exists
+            if (users.some(user => user.email === email)) {
+                document.getElementById('registerErrorMessage').style.display = 'block';
+                document.getElementById('registerErrorMessage').textContent = 'Email already registered';
+                return;
+            }
+
+            // Add new user
+            users.push({
+                firstName,
+                lastName,
+                email,
+                phone,
+                password,
+                registrationDate: new Date().toISOString()
+            });
+
+            // Save to localStorage
+            localStorage.setItem('users', JSON.stringify(users));
+
+            // Show success message
+            document.getElementById('registerErrorMessage').style.display = 'none';
+            document.getElementById('registerSuccessMessage').style.display = 'block';
+            document.getElementById('registerSuccessMessage').textContent = 'Registration successful! Please login.';
+
+            // Clear form
+            document.getElementById('registerForm').reset();
+
+            // Switch to login form after 2 seconds
+            setTimeout(() => {
+                toggleForms();
+            }, 2000);
+        });
+
+        // Phone number validation
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html> 
