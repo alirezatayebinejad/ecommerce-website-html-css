@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="description" content="Responsive ecommerce website with mobile-first design" />
+    <meta name="theme-color" content="#088178" />
+    <title>Ecommerce Website - Mobile Optimized</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" />
     <script
       src="https://kit.fontawesome.com/0e53af926d.js"
       crossorigin="anonymous"
+      defer
     ></script>
   </head>
   <body>
@@ -17,11 +21,16 @@
     <header>
       <div id="header">
         <div class="header-logo">
-          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="header-list">
           <nav class="header-list-nav">
-            <ul>
+            <ul id="nav-menu">
               <li><a class="active" href="index.html">Home</a></li>
               <li><a href="shop.html">Shop</a></li>
               <li><a href="blog.html">Blog</a></li>
@@ -74,12 +83,12 @@
         </div>
       </section>
 
-      <section class="product-section" class="section-p1">
+      <section class="product-section section-p1">
         <h1>Featured Products</h1>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-collection">
           <div class="product-cart">
-            <img src="images/products/f1.jpg" alt="product image" />
+            <img src="images/products/f1.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -93,7 +102,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f2.jpg" alt="product image" />
+            <img src="images/products/f2.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -107,7 +116,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f3.jpg" alt="product image" />
+            <img src="images/products/f3.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -121,7 +130,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f4.jpg" alt="product image" />
+            <img src="images/products/f4.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -135,7 +144,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f5.jpg" alt="product image" />
+            <img src="images/products/f5.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -149,7 +158,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f6.jpg" alt="product image" />
+            <img src="images/products/f6.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -163,7 +172,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f7.jpg" alt="product image" />
+            <img src="images/products/f7.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -177,7 +186,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/f8.jpg" alt="product image" />
+            <img src="images/products/f8.jpg" alt="Adidas Cartoon Astronaut T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -199,12 +208,12 @@
         <button class="normal">Explore More</button>
       </section>
 
-      <section class="product-section" class="section-p1">
+      <section class="product-section section-p1">
         <h1>New Arrivals</h1>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-collection">
           <div class="product-cart">
-            <img src="images/products/n1.jpg" alt="product image" />
+            <img src="images/products/n1.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -218,7 +227,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n2.jpg" alt="product image" />
+            <img src="images/products/n2.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -232,7 +241,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n3.jpg" alt="product image" />
+            <img src="images/products/n3.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -246,7 +255,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n4.jpg" alt="product image" />
+            <img src="images/products/n4.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -260,7 +269,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n5.jpg" alt="product image" />
+            <img src="images/products/n5.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -274,7 +283,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n6.jpg" alt="product image" />
+            <img src="images/products/n6.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -288,7 +297,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n7.jpg" alt="product image" />
+            <img src="images/products/n7.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -302,7 +311,7 @@
             <a href="#"><i class="fa-solid fa-cart-shopping buy-icon"></i></a>
           </div>
           <div class="product-cart">
-            <img src="images/products/n8.jpg" alt="product image" />
+            <img src="images/products/n8.jpg" alt="New Arrival T-Shirt" loading="lazy" />
             <span>adidas</span>
             <h4>Cartoon Astronaut T-Shirts</h4>
             <div class="stars">
@@ -344,7 +353,7 @@
           </div>
           <div class="small-banners-3">
             <h2>T-SHIRTS</h2>
-            <h5>New Trendy Prints</h4>
+            <h5>New Trendy Prints</h5>
           </div>
         </div>
       </section>
@@ -367,7 +376,7 @@
     <footer>
       <div id="footer">
         <div class="contact">
-          <a href="indext.html"><img src="images/logo.png" alt="" /></a>
+          <a href="index.html"><img src="images/logo.png" alt="Company Logo" /></a>
           <br> <br>
           <br> 
           <h3>Contact</h3>
@@ -379,11 +388,11 @@
           <h3>Follow Us</h3>
           <br> 
           <div class="socials">
-            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
           </div>
         </div>
         <div class="about">
@@ -409,16 +418,22 @@
           <br> 
           <p>From App Store or Google Play</p>
           <div class="download">
-            <a href="#"><img src="images/pay/app.jpg" alt=""></a>
-            <a href="#"><img src="images/pay/play.jpg" alt=""></a>
+            <a href="#"><img src="images/pay/app.jpg" alt="Download from App Store" loading="lazy" /></a>
+            <a href="#"><img src="images/pay/play.jpg" alt="Download from Google Play" loading="lazy" /></a>
           </div>
           <p>Secured Payment Gateways</p>
-          <img src="images/pay/pay.png" alt="">
+          <img src="images/pay/pay.png" alt="Accepted Payment Methods" loading="lazy" />
         </div>
         
       </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      function toggleMobileMenu() {
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('active');
+      }
+    </script>
   </body>
 </html>
