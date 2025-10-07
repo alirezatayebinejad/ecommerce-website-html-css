@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* global styles */
-
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +59,6 @@ body {
 }
 
 /* header styles */
-
 #header {
   display: flex;
   align-items: center;
@@ -69,7 +67,7 @@ body {
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -120,10 +118,7 @@ body {
   left: 20px;
 }
 
-/* home main styles */
-
-/* hero section styles */
-
+/* hero section */
 #hero {
   background-image: url(images/hero4.png);
   width: 100%;
@@ -135,19 +130,16 @@ body {
   justify-content: center;
   padding: 0 80px;
 }
-
 #hero h4 {
   padding-bottom: 15px;
   font-size: 40px;
 }
-#hero h2{
+#hero h2 {
   font-size: 70px;
-
 }
 #hero h1 {
   color: #088178;
   font-size: 70px;
-
 }
 #hero button {
   background-color: transparent;
@@ -164,8 +156,7 @@ body {
   padding: 14px 65px 14px 65px;
 }
 
-/* feature section styles */
-
+/* features section */
 #features {
   display: flex;
   align-items: center;
@@ -213,8 +204,7 @@ body {
   background-color: #fff2e5;
 }
 
-/* feature section styles */
-
+/* product section */
 .product-section .pro-collection {
   display: flex;
   flex-wrap: wrap;
@@ -233,10 +223,11 @@ body {
   border-radius: 25px;
   position: relative;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.3s ease;
 }
 .product-section .product-cart:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  transform: scale(1.05);
 }
 .product-section .product-cart img {
   width: 100%;
@@ -269,8 +260,7 @@ body {
   bottom: 10px;
 }
 
-/* off banner section styles */
-
+/* off banner */
 #off-banner {
   background-image: url(images/banner/b2.jpg);
   background-size: cover;
@@ -289,13 +279,7 @@ body {
   padding: 20px 0;
 }
 
-/* new arrival section styles 
-  this section gets the same styles 
-  in featured products section
-*/
-
-/* banners section styles */
-
+/* banners section */
 #banners {
   margin: 0 60px;
 }
@@ -319,7 +303,6 @@ span {
   justify-content: center;
   padding: 25px;
   background-size: cover;
-  backdrop-filter: blur(8%);
 }
 #banners .big-banners button {
   margin-top: 20px;
@@ -374,8 +357,7 @@ span {
   color: #771818;
 }
 
-/* newsletter section styles */
-
+/* newsletter section */
 #newsletter {
   background-image: url(images/banner/b14.png);
   background-repeat: no-repeat;
@@ -406,7 +388,6 @@ span {
   background-color: #d1d0d0;
   border-radius: 6px 0 0 6px;
   font-size: 18px;
-
   border: none;
   outline: none;
   margin-right: -4px;
@@ -424,34 +405,79 @@ span {
   cursor: pointer;
 }
 
-/* footer section styles */
-
-#footer{
+/* footer */
+#footer {
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 75px;
   background-color: #ececec;
 }
-#footer div{
-}
-#footer p, #footer a{
+#footer p,
+#footer a {
   color: rgb(109, 109, 109);
   text-decoration: none;
 }
-#footer a:hover{
-  color:#088178;
+#footer a:hover {
+  color: #088178;
 }
-#footer .about a{
+#footer .about a,
+#footer .myaccount a {
   display: block;
-  padding:8px 0;
+  padding: 8px 0;
 }
-#footer .myaccount a{
-  display: block;
-  padding:8px 0;
-}
-#footer .download img{
+#footer .download img {
   border: 1px solid #08817969;
   border-radius: 7px;
 }
 
+/* ------------------------------- */
+/* 🎨 New Added Feature Styles */
+/* ------------------------------- */
+
+/* 1️⃣ Dark Mode Toggle */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark-mode #header {
+  background-color: #222;
+}
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h4,
+body.dark-mode h6 {
+  color: #f1f1f1;
+}
+
+/* 2️⃣ Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #088178;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+#backToTop:hover {
+  background: #06685f;
+}
+
+/* 3️⃣ Newsletter Input Validation (visuals) */
+input.error {
+  border: 2px solid red;
+}
+
+/* 4️⃣ Product Image Hover Zoom */
+.product-section .product-cart img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
